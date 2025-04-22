@@ -21,3 +21,7 @@
 //         version: string | null
 //     }
 // }
+
+declare module 'ziggy-js' {
+    export const route: (name: string, params?: Record<string, any>, absolute?: boolean) => string;
+}

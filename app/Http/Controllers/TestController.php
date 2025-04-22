@@ -16,4 +16,14 @@ class TestController extends Controller
     {
         return Inertia::render('Test/Test1');
     }
+
+    /*
+     * test: pinia navbar component
+     * @author: Justin Lin
+     * @date : 2025-04-22 14:36:27
+     */
+    public function test2()
+    {
+        return Inertia::render('Test/Test2');
+    }
 }

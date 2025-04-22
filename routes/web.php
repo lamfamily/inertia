@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,10 @@ use App\Http\Controllers\PageController;
 // });
 
 Route::get('/', [PageController::class, 'home']);
-Route::get('/about', [PageController::class, 'about']);
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/dashboard', [IndexController::class, 'dashboard'])->name('dashboard');
 
 Route::group(['prefix' => 'test'], function () {
-    Route::get('test1', [\App\Http\Controllers\TestController::class, 'test1']);
+    Route::get('test1', [\App\Http\Controllers\TestController::class, 'test1'])->name('test1');
+    Route::get('test2', [\App\Http\Controllers\TestController::class, 'test2'])->name('test2');
 });
