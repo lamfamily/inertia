@@ -20,3 +20,7 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', [PageController::class, 'home']);
 Route::get('/about', [PageController::class, 'about']);
+
+Route::group(['prefix' => 'test'], function () {
+    Route::get('test1', [\App\Http\Controllers\TestController::class, 'test1']);
+});
