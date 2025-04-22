@@ -1,0 +1,60 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 100
+
+# PHP files follow PSR-2 coding standards
+[*.php]
+indent_size = 4
+
+# Markdown files may contain trailing whitespace
+[*.md]
+trim_trailing_whitespace = false
+
+# Blade templates may contain longer lines
+[*.blade.php]
+indent_size = 2
+max_line_length = 120
+
+# JS/TS/Vue files
+[*.{js,jsx,ts,tsx,vue}]
+indent_size = 2
+max_line_length = 100
+
+# CSS, SCSS, LESS
+[*.{css,scss,less}]
+indent_size = 2
+
+# JSON, YAML files
+[*.{json,yml,yaml}]
+indent_size = 2
+
+# XML files
+[*.{xml,svg}]
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+end_of_line = lf
+
+# Composer files
+[composer.json]
+indent_size = 4
+
+# Special files
+[{package.json,package-lock.json,yarn.lock}]
+indent_size = 2
+
+# Make files
+[Makefile]
+indent_style = tab
