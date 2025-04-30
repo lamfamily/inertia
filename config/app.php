@@ -70,7 +70,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('DEFAULT_TIMEZONE', 'Asia/Shanghai'),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => env('DEFAULT_LOCALE', 'zh-CN'),
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +96,9 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => env('FALLBACK_LOCALE', 'zh-CN'),
+
+    'allowed_locales' => explode(',', env('ALLOWED_LOCALES', 'zh-CN,en')),
 
     /*
     |--------------------------------------------------------------------------
