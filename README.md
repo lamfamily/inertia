@@ -425,3 +425,6 @@ export interface Paginated<T> {
 ```
 
 现在你有了一个完整的 Laravel 10 + Inertia.js + Vue 3 + TypeScript 项目，可以根据你的需求进一步开发和扩展。这个设置包含了基本的页面路由、布局和组件结构，并已配置好 TypeScript 支持。
+
+--- 
+# Laravel 10 + Inertia + Vue 3 + TypeScript + Pinia + i18n (JSON5) + Tailwind CSS + SPA语言切换, 支持zh-CN和en-US

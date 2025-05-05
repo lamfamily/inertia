@@ -3,10 +3,10 @@
     <div class="bg-white overflow-hidden shadow rounded-lg">
       <div class="px-4 py-5 sm:p-6">
         <h1 class="text-2xl font-bold text-gray-900">
-          {{ $t('about.title') }}
+          {{ $t('contact.title') }}
         </h1>
         <p class="mt-2 text-gray-600">
-          {{ $t('about.description') }}
+          {{ $t('contact.description') }}
         </p>
       </div>
     </div>

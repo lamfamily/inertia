@@ -1,0 +1,23 @@
+{
+  nav: {
+    home: '首页',
+    about: '关于',
+    contact: '联系我们',
+  },
+  welcome: {
+    title: '欢迎使用多语言支持',
+    description: '这是一个支持中英文切换的示例应用',
+  },
+  language: {
+    'en-US': 'English',
+    'zh-CN': '中文',
+  },
+  about: {
+    title: '关于我们',
+    description: '我们是一家重视多样性和包容性的公司。',
+  },
+  contact: {
+    title: '联系我们',
+    description: '如有任何疑问，请随时与我们联系。',
+  },
+}

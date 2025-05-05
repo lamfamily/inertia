@@ -1,31 +1,19 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "moduleResolution": "node",
-        "strict": true,
-        "jsx": "preserve",
-        "sourceMap": true,
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
-        "lib": [
-            "esnext",
-            "dom"
-        ],
-        "types": [
-            "vite/client"
-        ],
-        "baseUrl": ".",
-        "paths": {
-            "@/*": [
-                "resources/js/*"
-            ]
-        }
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "resources/js/**/*",
+    "resources/js/**/*.vue"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "resources/js/*"
+      ]
     },
-    "include": [
-        "resources/js/**/*.ts",
-        "resources/js/**/*.d.ts",
-        "resources/js/**/*.tsx",
-        "resources/js/**/*.vue"
-, "resources/js/app.ts"    ]
+    "types": [
+      "node"
+    ],
+    "isolatedModules": true,
+  }
 }

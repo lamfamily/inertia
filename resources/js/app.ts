@@ -3,21 +3,8 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import '../css/app.css';
 import { createPinia } from 'pinia';
-import { createI18n } from 'vue-i18n';
-
-const i18n = createI18n({
-  legacy: false,
-  locale: 'zh-CN',
-  fallbackLocale: "zh-CN",
-  messages: {
-    'zh-CN': {
-      Welcome: '欢迎',
-    },
-    'en-US': {
-      Welcome: 'Welcome 1',
-    },
-  }
-});
+import i18n from '@/i18n';
+import '@/plugins/axios';
 
 createInertiaApp({
   title: (title) => `${title} - ` + import.meta.env.VITE_APP_NAME,

@@ -1,0 +1,23 @@
+{
+  nav: {
+    home: 'Home',
+    about: 'About',
+    contact: 'Contact',
+  },
+  welcome: {
+    title: 'Welcome to Multilingual Support',
+    description: 'This is a sample application with Chinese and English language support',
+  },
+  language: {
+    'en-US': 'English',
+    'zh-CN': 'Chinese',
+  },
+  about: {
+    title: 'About Us',
+    description: 'We are a company that values diversity and inclusivity.',
+  },
+  contact: {
+    title: 'Contact Us',
+    description: 'Feel free to reach out to us for any inquiries.',
+  },
+}

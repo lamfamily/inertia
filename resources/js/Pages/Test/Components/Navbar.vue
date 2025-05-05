@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { onMounted, watch, computed } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
-import { useNavStore } from '@/Stores/navStore';
+import { useNavStore } from '@/stores/navStore';
 import { route } from 'ziggy-js';
 
 const navStore = useNavStore();
