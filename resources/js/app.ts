@@ -5,6 +5,7 @@ import '../css/app.css';
 import { createPinia } from 'pinia';
 import i18n from '@/i18n';
 import '@/plugins/axios';
+import { useAuthStore } from '@/stores/authStore';
 
 createInertiaApp({
   title: (title) => `${title} - ` + import.meta.env.VITE_APP_NAME,
@@ -24,5 +25,9 @@ createInertiaApp({
     app.use(i18n);
 
     app.mount(el);
+
+    // 初始化认证状态
+    const authStore = useAuthStore();
+    authStore.initAuth();
   },
 });

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+
+Route::group([
+    'prefix' => 'auth'
+], function () {
+    Route::post('login', [AuthController::class, 'login']);
+    Route::post('register', [AuthController::class, 'register']);
+
+    Route::group([
+        'middleware' => 'jwt.auth'
+    ], function () {
+        Route::post('logout', [AuthController::class, 'logout']);
+        Route::post('refresh', [AuthController::class, 'refresh']);
+        Route::get('me', [AuthController::class, 'me']);
+    });
+});
+
+// 其他需要认证的API路由
+Route::group(['middleware' => 'jwt.auth'], function() {
+    Route::get('/user-data', function() {
+        return response()->json(auth('api')->user());
+    });
 });

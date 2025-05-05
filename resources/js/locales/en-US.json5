@@ -3,6 +3,8 @@
     home: 'Home',
     about: 'About',
     contact: 'Contact',
+    logout: 'Logout',
+    login: 'Login',
   },
   welcome: {
     title: 'Welcome to Multilingual Support',
@@ -19,5 +21,33 @@
   contact: {
     title: 'Contact Us',
     description: 'Feel free to reach out to us for any inquiries.',
+  },
+  auth: {
+    login: {
+      title: 'Sign in to your account',
+      email: 'Email address',
+      password: 'Password',
+      submit: 'Sign in',
+      loading: 'Signing in...',
+      failed: 'Login failed. Please check your credentials',
+      noAccount: "Don't have an account?",
+      register: 'Register',
+    },
+    register: {
+      title: 'Create a new account',
+      name: 'Name',
+      email: 'Email address',
+      password: 'Password',
+      confirmPassword: 'Confirm password',
+      submit: 'Register',
+      loading: 'Registering...',
+      failed: 'Registration failed. Please check your input',
+      haveAccount: 'Already have an account?',
+      login: 'Sign in',
+    },
+    "logout": {
+      "confirm": "Are you sure you want to log out?",
+      "success": "You have been successfully logged out."
+    }
   },
 }

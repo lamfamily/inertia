@@ -1,6 +1,0 @@
-{
-  test1: 'this is a test text 1',
-  test-embed: {
-    test2: 'this is a embedded test text 2',
-  },
-}

@@ -2,6 +2,7 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\IndexController;
 
@@ -29,15 +30,21 @@ use App\Http\Controllers\IndexController;
 //     Route::get('test2', [\App\Http\Controllers\TestController::class, 'test2'])->name('test2');
 // });
 
+// 认证相关页面路由
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-});
+// 受保护路由 - 使用 jwt.web 中间件
+Route::middleware(['jwt.web'])->group(function() {
+    Route::get('/', function () {
+        return Inertia::render('Home');
+    });
 
-Route::get('/about', function () {
-    return Inertia::render('About');
-});
+    Route::get('/about', function () {
+        return Inertia::render('About');
+    });
 
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
+    Route::get('/contact', function () {
+        return Inertia::render('Contact');
+    });
 });
