@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#252525] text-[#fffef2] text-[.9375rem]" id="footer-info1">
+  <div class="bg-[#252525] text-[#fffef2] text-[.9375rem]">
     <div class="grid gap-x-10 gap-y-12 grid-cols-5 [grid-template-rows:auto_1fr] px-10 py-[50px] border-b-3 border-[#d6d5cb]">
       <!-- grid 1 -->
       <div class="col-start-1 col-end-3">
