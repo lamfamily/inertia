@@ -32,4 +32,10 @@ class TestController extends Controller
     {
         return Inertia::render('Test/Test3');
     }
+
+
+    public function test4()
+    {
+        return Inertia::render('Test/Test4');
+    }
 }

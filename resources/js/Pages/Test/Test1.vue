@@ -3,7 +3,7 @@
 
   <h1 class="text-3xl font-bold">test tailwindcss</h1>
 
-  <button class="btn-primary">custom tailwind class</button>
+  <button class="btn bg-brand text-white">custom tailwind class</button>
 
   <hr class="my-4" />
 
