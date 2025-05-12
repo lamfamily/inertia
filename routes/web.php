@@ -30,6 +30,7 @@ Route::group(['prefix' => 'test'], function () {
     Route::get('test3', [\App\Http\Controllers\TestController::class, 'test3'])->name('test3');
     Route::get('test4', [\App\Http\Controllers\TestController::class, 'test4'])->name('test4');
     Route::get('test5', [\App\Http\Controllers\TestController::class, 'test5'])->name('test5');
+    Route::get('test6', [\App\Http\Controllers\TestController::class, 'test6'])->name('test6');
 });
 
 

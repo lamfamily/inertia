@@ -33,5 +33,6 @@ export default defineConfig({
     cors: true,
     // 默认是::1,ssh 远程访问不了，要改
     host: "localhost",
+    port: 3001
   }
 });

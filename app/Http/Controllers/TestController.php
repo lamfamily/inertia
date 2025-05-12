@@ -43,4 +43,9 @@ class TestController extends Controller
     {
         return Inertia::render('Test/Test5');
     }
+
+    public function test6()
+    {
+        return Inertia::render('Test/Test6');
+    }
 }
