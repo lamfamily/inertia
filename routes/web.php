@@ -26,7 +26,9 @@ use App\Http\Controllers\IndexController;
 
 Route::group(['prefix' => 'test'], function () {
     for ($i = 1; $i <= 100; $i++) {
-        Route::get("test{$i}", [\App\Http\Controllers\TestController::class, "test{$i}"])->name("test{$i}");
+        Route::get("test{$i}", function () use ($i) {
+            return Inertia::render("Test/Test{$i}");
+        })->name("test{$i}");
     }
 });
 

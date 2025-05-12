@@ -7,50 +7,5 @@ use Inertia\Inertia;
 
 class TestController extends Controller
 {
-    /*
-     * test: tailwindcss custom class
-     * @author: Justin Lin
-     * @date : 2025-04-22 14:32:42
-     */
-    public function test1()
-    {
-        return Inertia::render('Test/Test1');
-    }
 
-    /*
-     * test: pinia navbar component
-     * @author: Justin Lin
-     * @date : 2025-04-22 14:36:27
-     */
-    public function test2()
-    {
-        return Inertia::render('Test/Test2');
-    }
-
-
-    public function test3()
-    {
-        return Inertia::render('Test/Test3');
-    }
-
-
-    public function test4()
-    {
-        return Inertia::render('Test/Test4');
-    }
-
-    public function test5()
-    {
-        return Inertia::render('Test/Test5');
-    }
-
-    public function test6()
-    {
-        return Inertia::render('Test/Test6');
-    }
-
-    public function test7()
-    {
-        return Inertia::render('Test/Test7');
-    }
 }
