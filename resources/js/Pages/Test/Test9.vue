@@ -1,8 +1,8 @@
 <template>
-  <Head title="吸顶" />
+  <Head title="吸顶+模拟aesop导航" />
 
   <!-- 消息栏 -->
-  <div class="w-full bg-black text-white text-center py-2">這是公告消息，所有訂單免運費！</div>
+  <div class="message-bar w-full bg-black text-white text-center py-2">這是公告消息，所有訂單免運費！</div>
 
   <!-- 流式导航栏（始终在文档流） -->
   <nav ref="navRef" class="w-full bg-white shadow">
@@ -21,7 +21,7 @@
   </transition>
 
   <!-- 占位，防止fixed导航栏遮住内容 -->
-  <div :style="{ height: fixedNavHeight + 'px' }"></div>
+  <!-- <div :style="{ height: fixedNavHeight + 'px' }"></div> -->
 
   <!-- 主内容 -->
   <main class="container mx-auto px-4 py-6 space-y-8">
