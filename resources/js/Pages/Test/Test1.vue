@@ -1,14 +1,17 @@
 <template>
+  <Head title="sidebar" />
   <div class="flex h-screen">
     <!-- Sidebar -->
     <aside
       :class="[
         'bg-gray-800 text-white flex flex-col transition-all duration-300 ease-in-out',
-        collapsed ? 'w-16' : 'w-64'
+        collapsed ? 'w-16' : 'w-64',
       ]"
     >
       <!-- Header -->
-      <div class="flex items-center justify-between h-16 px-4 border-b border-gray-700 flex-shrink-0">
+      <div
+        class="flex items-center justify-between h-16 px-4 border-b border-gray-700 flex-shrink-0"
+      >
         <span v-if="!collapsed" class="font-bold text-lg">Logo</span>
         <button
           @click="toggleSidebar"
@@ -48,66 +51,74 @@
 </template>
 
 <script setup lang="ts">
-import { HomeIcon, CogIcon, UserIcon, FireIcon, ChevronRightIcon, ChevronLeftIcon } from '@heroicons/vue/24/solid'
-import { ref } from 'vue'
-import Test1MainContent from './Components/Test1MainContent.vue'
+  import {
+    HomeIcon,
+    CogIcon,
+    UserIcon,
+    FireIcon,
+    ChevronRightIcon,
+    ChevronLeftIcon,
+  } from '@heroicons/vue/24/solid';
+  import { ref } from 'vue';
+  import Test1MainContent from './Components/Test1MainContent.vue';
+  import { Head } from '@inertiajs/vue3';
 
-const collapsed = ref(false)
-const toggleSidebar = () => (collapsed.value = !collapsed.value)
+  const collapsed = ref(false);
+  const toggleSidebar = () => (collapsed.value = !collapsed.value);
 
-const menuItems = [
-  { text: '首页', icon: 'home' },
-  { text: '设置', icon: 'cog' },
-  { text: '用户', icon: 'user' },
-  ...Array.from({ length: 30 }, (_, i) => ({
-    text: `菜单${i + 1}`,
-    icon: 'other'
-  }))
-]
+  const menuItems = [
+    { text: '首页', icon: 'home' },
+    { text: '设置', icon: 'cog' },
+    { text: '用户', icon: 'user' },
+    ...Array.from({ length: 30 }, (_, i) => ({
+      text: `菜单${i + 1}`,
+      icon: 'other',
+    })),
+  ];
 </script>
 
 <style scoped>
-/* 滚动条美化：适用于 Chrome, Edge, Safari */
-.sidebar-scroll::-webkit-scrollbar {
-  width: 8px;
-}
-.sidebar-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #334155 30%, #64748b 100%);
-  border-radius: 4px;
-}
-.sidebar-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
+  /* 滚动条美化：适用于 Chrome, Edge, Safari */
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #334155 30%, #64748b 100%);
+    border-radius: 4px;
+  }
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-/* Firefox */
-.sidebar-scroll {
-  scrollbar-color: #64748b #334155;
-  scrollbar-width: thin;
-}
+  /* Firefox */
+  .sidebar-scroll {
+    scrollbar-color: #64748b #334155;
+    scrollbar-width: thin;
+  }
 
-/* 鼠标悬停滚动条时更亮一点 */
-.sidebar-scroll::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
+  /* 鼠标悬停滚动条时更亮一点 */
+  .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
 
-/* 右侧滚动条美化 */
-.main-scroll::-webkit-scrollbar {
-  width: 10px;
-}
-.main-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #a3a3a3 30%, #64748b 100%);
-  border-radius: 4px;
-}
-.main-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
+  /* 右侧滚动条美化 */
+  .main-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  .main-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #a3a3a3 30%, #64748b 100%);
+    border-radius: 4px;
+  }
+  .main-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-.main-scroll {
-  scrollbar-color: #64748b #a3a3a3;
-  scrollbar-width: thin;
-}
+  .main-scroll {
+    scrollbar-color: #64748b #a3a3a3;
+    scrollbar-width: thin;
+  }
 
-.main-scroll::-webkit-scrollbar-thumb:hover {
-  background: #60a5fa;
-}
+  .main-scroll::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+  }
 </style>
