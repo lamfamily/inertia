@@ -2,7 +2,9 @@
   <Head title="吸顶+模拟aesop导航" />
 
   <!-- 消息栏 -->
-  <div class="message-bar w-full bg-black text-white text-center py-2">這是公告消息，所有訂單免運費！</div>
+  <div class="message-bar w-full bg-black text-white text-center py-2">
+    這是公告消息，所有訂單免運費！
+  </div>
 
   <!-- 流式导航栏（始终在文档流） -->
   <nav ref="navRef" class="w-full bg-white shadow">
@@ -24,18 +26,14 @@
   <!-- <div :style="{ height: fixedNavHeight + 'px' }"></div> -->
 
   <!-- 主内容 -->
-  <main class="container mx-auto px-4 py-6 space-y-8">
-    <section v-for="i in 100" :key="i" class="bg-gray-100 rounded p-8 mb-8 shadow">
-      <h2 class="text-2xl font-bold mb-2">內容區塊 {{ i }}</h2>
-      <p>下滑/上滑頁面觀察雙導航欄的體驗：只有一個導航欄會顯示，互不重疊。</p>
-    </section>
-  </main>
+  <Test9MainContent />
 </template>
 
 <script setup lang="ts">
   import { ref, onMounted, onUnmounted, nextTick } from 'vue';
   import { Head } from '@inertiajs/vue3';
   import Test9Nav from '@/Pages/Test/Components/Test9Nav.vue';
+  import Test9MainContent from './Components/Test9MainContent.vue';
 
   const navRef = ref<HTMLElement | null>(null);
   const fixedNavHeight = ref(0);
